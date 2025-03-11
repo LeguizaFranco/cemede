@@ -1,0 +1,13 @@
+---
+// Puedes añadir cualquier lógica que desees, como la fecha actual.
+const { anio = new Date().getFullYear() } = Astro.props;
+---
+
+<footer class="p-4 bg-white mt-6 border-t shadow-lg">
+    <div class="flex flex-col justify-center items-center text-center">
+        <!-- Información de contacto o sobre el sitio -->
+        <div class="text-gray-800 text-base mb-0">
+            <p class="text-center font-bold">&copy; {anio} CEMEDE.</p>
+        </div>
+    </div>
+</footer>

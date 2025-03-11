@@ -1,0 +1,83 @@
+<header
+    class="flex items-center justify-between p-4 bg-white shadow-md border-b"
+>
+    <!-- Logo -->
+    <div class="">
+        <a href="/" aria-label=""> </a>
+    </div>
+
+    <!-- Checkbox oculto para controlar el menú -->
+    <input type="checkbox" id="menu-toggle" class="hidden peer" />
+
+    <!-- Botón de menú en móviles -->
+    <label
+        for="menu-toggle"
+        class="md:hidden text-gray-800 focus:ring-2 focus:ring-blue-300 p-2 rounded-lg transition hover:bg-gray-100 cursor-pointer"
+        aria-label="Abrir menú"
+    >
+        <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </label>
+
+    <!-- Menú de navegación -->
+    <nav
+        class="fixed top-0 right-0 h-auto max-h-[90vh] w-64 bg-white shadow-lg transform translate-x-full md:translate-x-0 md:relative md:w-auto md:bg-transparent md:shadow-none transition-transform duration-300 overflow-y-auto
+      peer-checked:translate-x-0"
+    >
+        <!-- Botón de cierre en móviles -->
+        <label
+            for="menu-toggle"
+            class="absolute top-5 right-5 md:hidden text-gray-800 text-2xl focus:ring-2 focus:ring-red-400 p-2 rounded-lg hover:bg-red-100 transition cursor-pointer"
+            aria-label="Cerrar menú"
+        >
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </label>
+
+        <ul
+            class="flex flex-col md:flex-row md:items-center md:gap-6 text-lg font-medium text-gray-800 p-8 md:p-0"
+        >
+            <li>
+                <a
+                    href="#"
+                    class="block px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-600 transition"
+                    >Galería</a
+                >
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-600 transition"
+                    >Contenido</a
+                >
+            </li>
+            <li>
+                <a
+                    href="#"
+                    class="block px-4 py-2 rounded-md hover:bg-blue-100 hover:text-blue-600 transition"
+                    >Contacto</a
+                >
+            </li>
+        </ul>
+    </nav>
+</header>

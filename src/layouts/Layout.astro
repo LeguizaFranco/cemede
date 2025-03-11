@@ -1,0 +1,35 @@
+---
+const { title = "CEMEDE", logo = "/image/logo.jpg" } = Astro.props;
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="simage/jpeg" href={logo} />
+		<meta name="generator" content="Astro" />
+		<meta
+			name="description"
+			content="Centro médico de entrenamiento del este: Nutrición deportiva, kinesiología, recuperación de lesiones, y más servicios para mejorar tu rendimiento deportivo."
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+	<script defer is:inline src="/node_modules/preline/preline.js"></script>
+</html>
+
+<style is:global>
+	html,
+	body {
+		box-sizing: border-box;
+		height: 100%;
+		background-color: #d6d6c2;
+		max-width: 80rem; /* Puedes ajustarlo según tus necesidades */
+		margin: 0 auto;
+		padding: 0 1rem;
+	}
+</style>
